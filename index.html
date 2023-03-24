@@ -49,16 +49,15 @@
             var recommended_age = xmlDoc.getElementsByTagName("recommended_age");
             var colors = xmlDoc.getElementsByTagName("colors");
 
-            for (i = 0; i<category.length; i++) {
+            for (i = 0; i< category.length; i++) {
                 txt += `
                     <tr>
                         <td>${category[i].childNodes[0].nodeValue}</td>
                         <td>${name[i].childNodes[0].nodeValue}</td>
                         <td>${price[i].childNodes[0].nodeValue}</td>
                         <td>${recommended_age[i].childNodes[0].nodeValue}</td>
-                        <td>${colors[i].childNodes[0].nodeValue}</td>
                         <td>
-                            `;for(j=0; j<=6; j++){
+                            `;for(j=1; j<=4; j++){
                                 txt +=`
                             <ul>
                             <li>${colors[j].childNodes[0].nodeValue}</li>
